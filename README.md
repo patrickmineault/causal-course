@@ -2,7 +2,7 @@
 
 Notes from course on causal inference: https://www.bradyneal.com/causal-inference-course
 
-# Chapter 1
+# Chapters 1 & 2
 
 * Fundamental problem of causal inference: you only measure factuals, not counterfactuals.
   * There's the treated and the untreated. To measure the effect of the treatment, you need to estimate $Y(1) - Y(0)$, the effect of the treatment on both the treated and untreated minus the effect of no treatment on both the treated and untreated. However, you can only measure the effect of treatment on the treated and no treatment on the untreated - you have empty entries in your matrix.
@@ -22,6 +22,6 @@ Notes from course on causal inference: https://www.bradyneal.com/causal-inferenc
 
 * Example of estimation:
   * $E[Y|X, T=1]$, for X discrete can be estimated via binning.
-  * %E[Y|X, T=1]$ for X continuous can be estimated via linear regression. In fact, we can tie confounder weights and bundle up into a single regression, such that $Y ~ \alpha T + \beta X$ and estimate via linear regression. This is a very common surgery (*controlling for*, *adjusting for* in epidemiology settings).
+  * $E[Y|X, T=1]$ for X continuous can be estimated via linear regression. In fact, we can tie confounder weights and bundle up into a single regression, such that $Y ~ \alpha T + \beta X$ and estimate via linear regression. This is a very common surgery (*controlling for*, *adjusting for* in epidemiology settings).
 
 
